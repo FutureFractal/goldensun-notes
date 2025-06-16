@@ -1,4 +1,4 @@
-# goldensun-notes
+# 1 goldensun-notes
 
 General purpose notes repository for reverse engineering Golden Sun games
 
