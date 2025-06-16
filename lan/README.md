@@ -1,6 +1,8 @@
-1. [1 dism_notes](#1-dism_notes)
-2. [2 Author](#2-author)
-3. [3 See also](#2-see-also)
+- [1 What is this?](#1-what-is-this)
+- [2 Author](#2-author)
+- [3 See also](#3-see-also)
+
+
 # 1 What is this?
 
 Welcome! This is the general purpose notes repository for reverse engineering golden sun games on the GBA!
