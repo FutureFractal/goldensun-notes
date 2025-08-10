@@ -1,4 +1,5 @@
-2025-07-27 Wk 30 Sun14:332025-07-22 Wk 30 Tue - 08:312025-07-21 Wk 30 Mon - 00:50[1 What is this?](#1-what-is-this)
+
+[1 What is this?](#1-what-is-this)
 - [2 Author](#2-author)
 - [3 See also](#3-see-also)
 
@@ -8,6 +9,8 @@
 Welcome! This is the general purpose notes repository for reverse engineering golden sun games on the GBA!
 
 This repository is an obsidian vault. Get obsidian at https://obsidian.md/
+
+For higher browser viewing compatibility, switch to the [webview branch](https://github.com/FutureFractal/goldensun-notes/tree/webview/lan).
 
 # 2 Author
 
