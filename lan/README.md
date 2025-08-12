@@ -1,8 +1,7 @@
-
 [1 What is this?](#1-what-is-this)
-- [2 Author](#2-author)
-- [3 See also](#3-see-also)
 
+* [2 Author](#2-author)
+* [3 See also](#3-see-also)
 
 # 1 What is this?
 
@@ -14,17 +13,17 @@ For higher browser viewing compatibility, switch to the [webview branch](https:/
 
 # 2 Author
 
-This folder specifically is maintained by Lan <lanhikarixx@gmail.com>. 
+This folder specifically is maintained by Lan <lanhikarixx@gmail.com>.
 
 You can always chat with me. Please start the email title with `"GITCHAT"` so that I can find you!
 
 # 3 See also
 
-1. [delta-trace](<https://github.com/delta-domain-rnd/delta-trace>)
-	- Notes and articles on creating proofs of concepts, researching, and studying.
-2. [lan-setup-notes](<https://github.com/LanHikari22/lan-setup-notes>)
-	- For notes on configurations and setting up of projects and systems.
-3. [dism-exe-notes](<https://github.com/dism-exe/dism-exe-notes/tree/main/lan>)
-	- For notes on the process of reverse engineering games, running code analysis, and creating new tools! This is about reverse engineering the Mega Man Battle Network series.
-4. [goldensun-notes](<https://github.com/FutureFractal/goldensun-notes/tree/main/lan>) **You are here!**
-	- Similar to `dism-exe-notes` but for reverse engineering the `goldensun` games on the `GBA`!
+1. [delta-trace](https://github.com/delta-domain-rnd/delta-trace)
+   * Notes and articles on creating proofs of concepts, researching, and studying.
+1. [lan-setup-notes](https://github.com/LanHikari22/lan-setup-notes)
+   * For notes on configurations and setting up of projects and systems.
+1. [dism-exe-notes](https://github.com/dism-exe/dism-exe-notes/tree/main/lan)
+   * For notes on the process of reverse engineering games, running code analysis, and creating new tools! This is about reverse engineering the Mega Man Battle Network series.
+1. [goldensun-notes](https://github.com/FutureFractal/goldensun-notes/tree/main/lan) **You are here!**
+   * Similar to `dism-exe-notes` but for reverse engineering the `goldensun` games on the `GBA`!
