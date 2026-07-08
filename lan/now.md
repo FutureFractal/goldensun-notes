@@ -1,25 +1,24 @@
-**What's a now?**
+
+# What?
 
 In this file I articulate what I'm currently up to with goldensun reversing.
 
-**Current project impressions**
+About now pages in general: https://sive.rs/nowff
 
-Just jumping in, lots I will have to learn about with the current progress.
+# What am I doing?
 
-**What am I doing?**
+Checking for how strings are being processed. Hoping to find leads into some code so I can start matching.
 
-- reorganizing this note repository!
-- building the new decomp
-	- [[000 setup Coaltergeist decomp proj]]
+You can find my investigation inbox and current active explorations in [[001 Inbox]].
 
-**Need help?**
+# Need help?
 
 Not currently
 
-**Any blockers?**
+# Any blockers?
 
 Not currently
 
-**Other**
+# See also
 
-You can check my general [now](https://github.com/deltatraced/delta-trace/blob/webview/now.md) in my other general notes repository, if you want.
+You can check my general [now](https://codeberg.org/deltatraced/deltatraced/src/branch/webview/now.md) in my other general notes repository, if you want.

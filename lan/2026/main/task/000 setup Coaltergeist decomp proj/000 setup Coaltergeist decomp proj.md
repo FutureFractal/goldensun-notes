@@ -1,13 +1,13 @@
 ---
-status: todo
+status: done
 ---
 # 1 Objective
 
-- [ ] Build an OK ROM.
+- [x] Build an OK ROM.
 
 # Related
 
- - [[000 Issues encountered building camelot-gcc]].
+ - [[000 Issues for building camelot-gcc]].
 
 # 2 Journal
 
@@ -55,7 +55,7 @@ chmod +x ./build-296.sh ./install-296.sh
 
 2026-05-25 Wk 22 Mon - 09:20 +03:00
 
-Spawn [[000 Issues encountered building camelot-gcc]] ^spawn-entry-cb3dec
+Spawn [[000 Issues for building camelot-gcc]] ^spawn-entry-cb3dec
 
 
 ---

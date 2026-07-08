@@ -1,13 +1,13 @@
 ---
 context_type: issue
-status: todo
+status: done
 ---
+2026-07-08 Wk 28 Wed - 07:11 +03:002026-06-07 Wk 23 Sun - 14:05 +03:00202silve
+Parent: [[000 setup Coaltergeist decomp proj]]
 
-Parent: [[lan/task/000 setup Coaltergeist decomp proj/000 setup Coaltergeist decomp proj]]
+Spawned by: [[000 Issues for building camelot-gcc]]
 
-Spawned by: [[000 Issues encountered building camelot-gcc]]
-
-Spawned in: [[000 Issues encountered building camelot-gcc#^spawn-issue-d1302a|^spawn-issue-d1302a]]
+Spawned in: [[000 Issues for building camelot-gcc#^spawn-issue-d1302a|^spawn-issue-d1302a]]
 
 # Prior Logs leading to error
 
@@ -192,12 +192,12 @@ TAG="ubuntu_25.04" MOUNT="." sh <(curl -sSf https://raw.githubusercontent.com/de
 # in container
 cd ~
 apt-get update
-apt install build-essential binutils-arm-none-eabi python3 git \
-                 bison flex texinfo
-git clone https://github.com/Coaltergeist/camelot-gcc
+apt install build-essential binutils-arm-none-eabi python3 git bison flex texinfo
 
 # Some extra dependencies that the build ended up needing:
 apt install autoconf
+
+git clone https://github.com/Coaltergeist/camelot-gcc
 
 cd camelot-gcc
 chmod +x ./build-296.sh ./install-296.sh
@@ -213,3 +213,53 @@ cd /root/camelot-gcc/gcc-2.96/gcc; autoconf
 autom4te: error: /usr/bin/m4 failed with exit status: 1
 make: *** [Makefile:946: /root/camelot-gcc/gcc-2.96/gcc/configure] Error 1
 ```
+
+2026-06-06 Wk 23 Sat - 02:01 +03:00
+
+Let's try to pull latest changes and rebuild
+
+```sh
+git clone git@github.com:Coaltergeist/goldensun-decomp.git
+```
+
+> * **goldensun.gba** `sha1: 5c4695205413df7db52b9a184815a07783999971` (USA)
+
+```sh
+# in /home/lan/src/cloned/gh/Coaltergeist/goldensun-decomp
+sha1sum baserom.gba
+
+# out
+5c4695205413df7db52b9a184815a07783999971  baserom.gba
+```
+
+Following [INSTALL.md](https://github.com/Coaltergeist/goldensun-decomp/blob/main/INSTALL.md),
+
+```sh
+sudo apt update
+sudo apt install build-essential binutils-arm-none-eabi python3 git \
+                 bison flex texinfo
+```
+
+The instructions 
+
+```sh
+./build-296.sh                          # ~5-10 min, vendored gcc-2.96 source + 7 patches
+./install-296.sh ../goldensun-decomp
+```
+
+are outdated.
+
+```sh
+# in /home/lan/src/cloned/gh/Coaltergeist
+git clone https://github.com/Coaltergeist/camelot-gcc
+./build.sh gcc296
+./install.sh ~/src/cloned/gh/Coaltergeist/goldensun-decomp gcc296
+
+# in /home/lan/src/cloned/gh/Coaltergeist/goldensun-decomp
+```
+
+We get a build error for missing headers. This is bypassed by getting the required headers from https://github.com/pret/agbcc `libc/include` and `glibc/` and finally copying `old_agbcc` to `tools/agbcc/bin`.
+
+2026-06-06 Wk 23 Sat - 04:49 +03:00
+
+It actually should be `./build.sh all` and `./install.sh ~/src/cloned/gh/Coaltergeist/goldensun-decomp all`. Then we won't need to do those manual copying of files from `pret/agbcc`. 
