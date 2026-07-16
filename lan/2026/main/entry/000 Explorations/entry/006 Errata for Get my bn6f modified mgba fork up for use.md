@@ -2,11 +2,11 @@
 context_type: entry
 ---
 
-Parent: [[lan/2026/main/entry/000 Explorations/000 Explorations]]
+Parent: [lan/2026/main/entry/000 Explorations/000 Explorations](../000%20Explorations.md)
 
-Spawned by: [[lan/2026/main/entry/000 Explorations/task/000 Get my bn6f modified mgba fork up for use]]
+Spawned by: [lan/2026/main/entry/000 Explorations/task/000 Get my bn6f modified mgba fork up for use](../task/000%20Get%20my%20bn6f%20modified%20mgba%20fork%20up%20for%20use.md)
 
-Spawned in: [[lan/2026/main/entry/000 Explorations/task/000 Get my bn6f modified mgba fork up for use#^spawn-entry-999edc|^spawn-entry-999edc]]
+Spawned in: [<a name="spawn-entry-999edc" />^spawn-entry-999edc](../task/000%20Get%20my%20bn6f%20modified%20mgba%20fork%20up%20for%20use.md#spawn-entry-999edc)
 
 # Journal
 
@@ -22,25 +22,24 @@ I wrote,
 
 Let's build. I found this in my history:
 
-```sh
+````sh
 # in /home/lan/src/forked/gh/LanHikari22/mgba-emu/branches/mgba@exp-re-logs/
 docker run --rm -it -v ${PWD}:/home/lan/src/forked/gh/LanHikari22/mgba-emu/branches/mgba@exp-re-logs/ mgba/ubuntu:plucky
-```
+````
 
 (/quote)
 
 But actually that doesn't do it. It gives a permission denied for creating a folder:
 
-```
+````
 Status: Downloaded newer image for mgba/ubuntu:plucky
 mkdir: cannot create directory 'build-plucky': Permission denied
-```
+````
 
 But from the README we can see the correct command should be
 
-```
+````
 docker run --rm -it -v ${PWD}:/home/mgba/src mgba/ubuntu:plucky
-```
+````
 
 Which also was in my history!
-

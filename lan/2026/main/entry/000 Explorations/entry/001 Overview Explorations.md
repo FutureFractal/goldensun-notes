@@ -2,11 +2,11 @@
 context_type: entry
 ---
 
-Parent: [[000 Explorations]]
+Parent: [000 Explorations](../000%20Explorations.md)
 
-Spawned by: [[000 Explorations]]
+Spawned by: [000 Explorations](../000%20Explorations.md)
 
-Spawned in: [[000 Explorations#^spawn-entry-c762a6|^spawn-entry-c762a6]]
+Spawned in: [<a name="spawn-entry-c762a6" />^spawn-entry-c762a6](../000%20Explorations.md#spawn-entry-c762a6)
 
 # What?
 
@@ -16,7 +16,7 @@ We use indices for the explorations to be able to duplicate an exploration title
 
 # Explorations
 
-- [[002 explore getting started]]
-- [[003 explore filesystem]]
-- [[004 Explore tracing from main]]
-- [[005 Explore tracing by gdb and augmented mgba]]
+* [002 explore getting started](002%20explore%20getting%20started.md)
+* [003 explore filesystem](003%20explore%20filesystem.md)
+* [004 Explore tracing from main](004%20Explore%20tracing%20from%20main.md)
+* [005 Explore tracing by gdb and augmented mgba](005%20Explore%20tracing%20by%20gdb%20and%20augmented%20mgba.md)

@@ -3,11 +3,11 @@ context_type: task
 status: todo
 ---
 
-Parent: [[lan/2026/main/investigation/000 How do we track common game strings?/000 How do we track common game strings?]]
+Parent: [lan/2026/main/investigation/000 How do we track common game strings?/000 How do we track common game strings?](../000%20How%20do%20we%20track%20common%20game%20strings%3F.md)
 
-Spawned by: [[lan/2026/main/investigation/000 How do we track common game strings?/000 How do we track common game strings?]]
+Spawned by: [lan/2026/main/investigation/000 How do we track common game strings?/000 How do we track common game strings?](../000%20How%20do%20we%20track%20common%20game%20strings%3F.md)
 
-Spawned in: [[lan/2026/main/investigation/000 How do we track common game strings?/000 How do we track common game strings?#^spawn-task-adabc8|^spawn-task-adabc8]]
+Spawned in: [<a name="spawn-task-adabc8" />^spawn-task-adabc8](../000%20How%20do%20we%20track%20common%20game%20strings%3F.md#spawn-task-adabc8)
 
 # Objective
 
@@ -16,7 +16,6 @@ When we boot the game, it gives us a name entry UI. It has a default value "Isaa
 Change those to "caasI", "LED", and "DNE".
 
 # Resolution
-
 
 # Journal
 
@@ -28,7 +27,7 @@ Even if we change `Isaac > Ivaac` in `~/src/forked/gh/LanHikari22/Coaltergeist/b
 
 Let's try to comment out the building of `data/strings/strings.txt`:
 
-```diff
+````diff
 # in /home/lan/src/forked/gh/LanHikari22/Coaltergeist/branches/goldensun-decomp@fork-main/Makefile
 -data/strings/strings.txt: baserom.gba tools/unpack_strings
 -       mkdir -p $(dir $@)
@@ -36,9 +35,9 @@ Let's try to comment out the building of `data/strings/strings.txt`:
 +#data/strings/strings.txt: baserom.gba tools/unpack_strings
 +#      mkdir -p $(dir $@)
 +#      tools/unpack_strings -r $< -o $@
-```
+````
 
-Running `make compare-rom` on this does generate a modified ROM `goldensun.gba: FAILED`. 
+Running `make compare-rom` on this does generate a modified ROM `goldensun.gba: FAILED`.
 
 Changing only the first instance of Isaac to Ivaac did not change it in the starter name entry widget. Let's try to update all of them.
 

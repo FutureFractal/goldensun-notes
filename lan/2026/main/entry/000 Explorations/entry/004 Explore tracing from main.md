@@ -2,11 +2,11 @@
 context_type: entry
 ---
 
-Parent: [[lan/2026/main/entry/000 Explorations/000 Explorations]]
+Parent: [lan/2026/main/entry/000 Explorations/000 Explorations](../000%20Explorations.md)
 
-Spawned by: [[lan/2026/main/entry/000 Explorations/000 Explorations]]
+Spawned by: [lan/2026/main/entry/000 Explorations/000 Explorations](../000%20Explorations.md)
 
-Spawned in: [[lan/2026/main/entry/000 Explorations/000 Explorations#^spawn-entry-349ee7|^spawn-entry-349ee7]]
+Spawned in: [<a name="spawn-entry-349ee7" />^spawn-entry-349ee7](../000%20Explorations.md#spawn-entry-349ee7)
 
 # What?
 
@@ -20,25 +20,25 @@ Code is same state as commit `5bd24497` in https://github.com/Coaltergeist/golde
 
 2026-07-13 Wk 29 Mon - 05:51 +03:00
 
-So first we need to find where main is. This is a GBA ROM, so the address is fixed. 
+So first we need to find where main is. This is a GBA ROM, so the address is fixed.
 
-```sh
+````sh
 # in /home/lan/src/cloned/gh/dism-exe/bn6f/bn6f.sym
 08000000 l 000001c4 GameEntryPoint
 08000004 l 00000000 GameHeader
 080000d0 l 00000000 _GameEntryPoint
-```
+````
 
-```arm
+````arm
 # in /home/lan/src/cloned/gh/dism-exe/bn6f/asm/start.s
 	arm_local_start
 GameEntryPoint:
 	b _GameEntryPoint
-```
+````
 
 $\to$ https://problemkaputt.de/gbatek-gba-cartridge-header.htm
 
-```
+````
    000h    4     ROM Entry Point  (32bit ARM branch opcode, eg. "B rom_start")
    
 **0C0h - Normal/Multiplay mode Entry Point**
@@ -48,20 +48,20 @@ Appears to be unused.
 
 **0E0h - Joybus mode Entry Point**  
 If the GBA has been booted by using Joybus transfer mode, then the entry point is located at this address rather than at 20000C0h.
-```
+````
 
 Says `0C0h` instead of `0D0h` and doesn't know the function of `0D0h`, but does acknowledge that the entrypoint can very.
 
 Either way, we expect code right at `08000000`.
 
-$\to$ 
+$\to$
 
-```map
+````map
 # in /home/lan/src/forked/gh/LanHikari22/Coaltergeist/branches/goldensun-decomp@fork-main/goldensun.map
                 0x0000000008000000                __start_rom = ORIGIN (rom)
-```
+````
 
-```ldscript
+````ldscript
 # in /home/lan/src/forked/gh/LanHikari22/Coaltergeist/branches/goldensun-decomp@fork-main/goldensun.ld
 SECTIONS {
 	__start_rom = ORIGIN(rom);
@@ -70,33 +70,33 @@ SECTIONS {
 	header : {
 		stage1.o(header)
 	} > rom
-```
+````
 
-```map
+````map
 # in /home/lan/src/forked/gh/LanHikari22/Coaltergeist/branches/goldensun-decomp@fork-main/stage1.map
  .text          0x0000000008000000       0xc0 src/rom_header.o
-```
+````
 
 $\to$
 
-`goldensun-decomp/src/rom_header.s` has the header info at the beginning of the game and points towards a function `_start`: 
+`goldensun-decomp/src/rom_header.s` has the header info at the beginning of the game and points towards a function `_start`:
 
-```s
+````s
 # in /home/lan/src/forked/gh/LanHikari22/Coaltergeist/branches/goldensun-decomp@fork-main/src/rom_c0/crt0.s
 .arm_func_start _start
-```
+````
 
-- `src/rom_c0/crt0.s > fn _start`
-- $\to$ `src/rom_c0/rom_2e00_b.c > fn AgbMain`
+* `src/rom_c0/crt0.s > fn _start`
+* $\to$ `src/rom_c0/rom_2e00_b.c > fn AgbMain`
 
-This uses some `_GameStart` but it extern declared in. There is 
+This uses some `_GameStart` but it extern declared in. There is
 
-```s
+````s
 # in /home/lan/src/forked/gh/LanHikari22/Coaltergeist/branches/goldensun-decomp@fork-main/src/rom_8a000/exports.s
 	.export_func GameStart
-```
+````
 
-```inc
+````inc
 # in /home/lan/src/forked/gh/LanHikari22/Coaltergeist/branches/goldensun-decomp@fork-main/include/macros.inc
 
 	.macro .thumb_stub sym, target, reg=r4
@@ -109,7 +109,7 @@ This uses some `_GameStart` but it extern declared in. There is
 	.macro .export_func sym
 	.thumb_stub _\sym, \sym
 	.endm
-```
+````
 
 So there should already be a `GameStart` function defined somewhere.
 
@@ -119,7 +119,7 @@ It explains here about the `.s` files being generated (although `GameStart` is n
 
 From https://github.com/Coaltergeist/goldensun-decomp/blob/5bd24497cfb52326c30ca996da3a38d067b3b58d/.gitignore,
 
-```sh
+````sh
 # Compiler-generated .s intermediates: Make's %.o:%.c rule writes a .s next to
 # every src/ .c, so refresh_expected.sh / a full `make` litters src/ with them.
 # Ignore all .s under src/ EXCEPT the hand-written glue (crt0/exports/imports
@@ -139,7 +139,7 @@ src/**/*.s
 # git never untracks tracked files). NOTE: a genuinely new raw-disassembly .s
 # (e.g. a fresh split) must be added with `git add -f`.
 asm/**/*.s
-```
+````
 
 2026-07-13 Wk 29 Mon - 07:27 +03:00
 
@@ -149,11 +149,10 @@ Yet in `.gitignore` we have `asm/**/*.s`. If we modify it, git recognizes it as 
 
 The hint in the above comment is that there are "genuine raw-disassembly .s"s that one may explicitly opt-in to be tracked with `git add -f`.
 
-So when we we encounter an `extern` function declaration, look for the corresponding code under `asm/*`. 
+So when we we encounter an `extern` function declaration, look for the corresponding code under `asm/*`.
 
 2026-07-13 Wk 29 Mon - 07:43 +03:00
 
-- `src/rom_c0/crt0.s > fn _start`
-- $\to$ `src/rom_c0/rom_2e00_b.c > fn AgbMain`
-- $\to$ `asm/rom_8a000/rom_8a5f8_a_c_a.s > fn _GameStart`
-
+* `src/rom_c0/crt0.s > fn _start`
+* $\to$ `src/rom_c0/rom_2e00_b.c > fn AgbMain`
+* $\to$ `asm/rom_8a000/rom_8a5f8_a_c_a.s > fn _GameStart`

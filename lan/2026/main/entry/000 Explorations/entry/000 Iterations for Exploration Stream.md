@@ -2,11 +2,11 @@
 context_type: entry
 ---
 
-Parent: [[000 Explorations]]
+Parent: [000 Explorations](../000%20Explorations.md)
 
-Spawned by: [[000 Explorations]]
+Spawned by: [000 Explorations](../000%20Explorations.md)
 
-Spawned in: [[000 Explorations#^spawn-entry-e422af|^spawn-entry-e422af]]
+Spawned in: [<a name="spawn-entry-e422af" />^spawn-entry-e422af](../000%20Explorations.md#spawn-entry-e422af)
 
 # Journal
 

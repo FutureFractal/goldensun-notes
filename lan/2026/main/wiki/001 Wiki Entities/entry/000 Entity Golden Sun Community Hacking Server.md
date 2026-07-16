@@ -2,11 +2,11 @@
 context_type: entry
 ---
 
-Parent: [[001 Wiki Entities]]
+Parent: [001 Wiki Entities](../001%20Wiki%20Entities.md)
 
-Spawned by: [[001 Spawns for Wiki Proc Entities]]
+Spawned by: [001 Spawns for Wiki Proc Entities](../../../wikiproc/001%20Wiki%20Proc%20Entities/entry/001%20Spawns%20for%20Wiki%20Proc%20Entities.md)
 
-Spawned in: [[001 Spawns for Wiki Proc Entities#^spawn-entry-9e54ab|^spawn-entry-9e54ab]]
+Spawned in: [<a name="spawn-entry-9e54ab" />^spawn-entry-9e54ab](../../../wikiproc/001%20Wiki%20Proc%20Entities/entry/001%20Spawns%20for%20Wiki%20Proc%20Entities.md#spawn-entry-9e54ab)
 
 ---
 

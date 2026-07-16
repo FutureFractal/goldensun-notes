@@ -2,11 +2,11 @@
 context_type: entry
 ---
 
-Parent: [[001 Create custom ctags for golden sun decomp]]
+Parent: [001 Create custom ctags for golden sun decomp](../001%20Create%20custom%20ctags%20for%20golden%20sun%20decomp.md)
 
-Spawned by: [[001 Create custom ctags for golden sun decomp]]
+Spawned by: [001 Create custom ctags for golden sun decomp](../001%20Create%20custom%20ctags%20for%20golden%20sun%20decomp.md)
 
-Spawned in: [[001 Create custom ctags for golden sun decomp#^spawn-entry-d6a886|^spawn-entry-d6a886]]
+Spawned in: [<a name="spawn-entry-d6a886" />^spawn-entry-d6a886](../001%20Create%20custom%20ctags%20for%20golden%20sun%20decomp.md#spawn-entry-d6a886)
 
 # Journal
 
@@ -16,27 +16,27 @@ Spawned in: [[001 Create custom ctags for golden sun decomp#^spawn-entry-d6a886|
 
 For a given `.opt.ctags`
 
-```
+````
 --langdef=pp
 --map-pp=+.pp
 --kinddef-asm=thumb_func_start
-```
+````
 
 This yields an error:
 
-```sh
+````sh
 # in /home/lan/src/forked/gh/LanHikari22/Coaltergeist/branches/goldensun-decomp@fork-main
 ctags --options=.opt.ctags -R **/*.s **/*.c
 
 # out (error)
 ctags: Unknown option: --map-pp
-```
+````
 
 2026-07-15 Wk 29 Wed - 22:46 +03:00
 
 https://github.com/universal-ctags/ctags mentions that Universal ctags `u-ctags` is currently maintained. Install it:
 
-```sh
+````sh
 mkdir -p ~/src/cloned/gh/universal-ctags/
 cd ~/src/cloned/gh/universal-ctags/
 git clone git@github.com:universal-ctags/ctags.git
@@ -45,11 +45,11 @@ cd ctags
 ./configure
 make
 sudo make install
-```
+````
 
 Check it is installed with `ctags --version`
 
-```sh
+````sh
 # before
 Exuberant Ctags 5.9~svn20110310, Copyright (C) 1996-2009 Darren Hiebert
   Addresses: <dhiebert@users.sourceforge.net>, http://ctags.sourceforge.net
@@ -63,6 +63,6 @@ Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
   URL: https://ctags.io/
   Output version: 1.1
   Optional compiled features: +wildcards, +regex, +iconv, +option-directory, +xpath, +packcc, +optscript, +pcre2
-```
+````
 
 This should resolve the unknown option problem.
