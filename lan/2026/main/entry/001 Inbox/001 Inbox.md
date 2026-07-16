@@ -1,24 +1,37 @@
 
+**Task Inbox**
+
+- [[001 Create custom ctags for golden sun decomp]]
+
 **Investigation Inbox**
 
 - [[000 How do we track common game strings?]]
 - [[000 How does gsmagic parse strings from the GS ROM?]]
 
+**Small Mod Inbox**
+
+- [[000 Mod Change the starter name entry name and buttons]]
+
 **Exploration Inbox**
 
 Investigations are close-ended questions to be resolved, while explorations are open-ended and are meant to generate new leads or help us get our bearing with the source code. Check out all explorations in [[001 Overview Explorations]]
 
-- [[002 Getting Started Exploration 0]]
-- [[003 Filesystem Exploration 0]]
+- [[005 Explore tracing by gdb and augmented mgba]]
+- [[002 explore getting started]]
+- [[003 explore filesystem]]
 
-**Other inboxes**
+**Status Inboxes**
 
 - [[001 Done Inbox]]
 - [[002 Wontdo Inbox]]
 
+**Other inboxes**
+
+- [[003 Inlined Question Inbox]]
+
 **See also**
 
-- [[now]]
+-  [[now]]
 
 ---
 

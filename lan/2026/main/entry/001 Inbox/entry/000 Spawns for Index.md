@@ -15,3 +15,8 @@ Spawned in: [[001 Inbox#^spawn-entry-39438e|^spawn-entry-39438e]]
 Spawn [[001 Done Inbox]] ^spawn-entry-d798bb
 
 Spawn [[lan/2026/main/entry/001 Inbox/entry/002 Wontdo Inbox]] ^spawn-entry-099880
+
+Spawn [[lan/2026/main/entry/001 Inbox/entry/003 Inlined Question Inbox]] ^spawn-entry-c28945
+
+Spawn [[lan/2026/main/entry/001 Inbox/entry/004 Inlined Question Inbox Done]] ^spawn-entry-d87e94
+

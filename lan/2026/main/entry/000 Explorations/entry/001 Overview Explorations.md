@@ -16,5 +16,7 @@ We use indices for the explorations to be able to duplicate an exploration title
 
 # Explorations
 
-- [[002 Getting Started Exploration 0]]
-- [[003 Filesystem Exploration 0]]
+- [[002 explore getting started]]
+- [[003 explore filesystem]]
+- [[004 Explore tracing from main]]
+- [[005 Explore tracing by gdb and augmented mgba]]

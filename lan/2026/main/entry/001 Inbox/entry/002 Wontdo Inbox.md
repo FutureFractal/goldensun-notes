@@ -10,10 +10,9 @@ Spawned in: [[lan/2026/main/entry/001 Inbox/entry/000 Spawns for Index#^spawn-en
 
 ---
 
+**Investigation Wontdo Index**
+
 - [[001 Wontdo How does gsmagic decompress an asset?]]
 
---/ 2026-07-08 Wk 28 Wed - 19:37 +03:00
-
-Investigation Inbox $\to$ Wontdo Inbox
-
+--/ 2026-07-08 Wk 28 Wed - 19:37 +03:00 | Investigation Inbox $\to$ Wontdo Inbox
 --/
